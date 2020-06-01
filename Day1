@@ -13,3 +13,17 @@ class Solution:
                 firstPointer+=1
             else: 
                 return firstPointer+1,secondPointer+1
+
+#Task2
+
+# Missing number
+
+t=int(input())
+for i in range(t):
+    n=int(input())
+    a=[0]*(n-1)
+    a=[int(num) for num in input().split()]
+    expectedSum=round(n*(n+1)/2)
+    actualSum=sum(a)
+    missingNumber=expectedSum-actualSum
+    print(missingNumber)
