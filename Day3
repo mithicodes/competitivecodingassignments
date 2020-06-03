@@ -1,0 +1,18 @@
+# Task 1
+
+# Two Repeated Elements 
+
+testcases=int(input())
+while testcases>0:
+    n=int(input())
+    dict={}
+    arr=[int(item) for item in input().split()]
+    for i in range(n+2):
+        if arr[i] not in dict:
+            dict[arr[i]]=1
+        else:
+            print(arr[i], end=" ")
+    print()
+    testcases-=1      
+    
+    
