@@ -20,3 +20,14 @@
 3. https://leetcode.com/problems/transpose-matrix/description/
 4. https://leetcode.com/problems/find-lucky-integer-in-an-array/
 5. https://leetcode.com/problems/toeplitz-matrix/
+
+### Day 4
+
+##### BREAK
+
+### Day 5
+
+1. https://leetcode.com/problems/intersection-of-two-arrays/
+2. https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+3. https://leetcode.com/problems/first-bad-version/
+4. https://leetcode.com/problems/search-insert-position/
