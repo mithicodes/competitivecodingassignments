@@ -29,6 +29,8 @@ class Solution:
  # 1 2
  # Ans : {4,4,7,9,0}
  
+ # Approach 1 - Brute force
+ 
 arr=[int(item) for item in input().split()]
 queries= int(input())
 for i in range(queries):
@@ -39,4 +41,26 @@ for i in range(queries):
         arr[:]=arr[k:]+arr[:k]       
     elif direction==2:
         arr[:]=arr[-k:]+arr[:-k]
+print(arr)
+
+
+# Approach 2 - Optimized
+
+# Calculating resulting rotation of all queries, considering left rotations as positive and right rotations as negative
+
+arr=[int(item) for item in input().split()]
+queries= int(input())
+sum=0
+for i in range(queries):
+    direction,k=map(int,input().split())
+    if direction==1:
+        sum+=k
+    else:
+        sum-=k
+if sum>len(arr):
+        sum=sum%len(arr)
+if sum>0:
+    arr[:]=arr[sum:]+arr[:sum]       
+elif sum<0:
+    arr[:]=arr[-sum:]+arr[:-sum]
 print(arr)
