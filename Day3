@@ -14,5 +14,68 @@ while testcases>0:
             print(arr[i], end=" ")
     print()
     testcases-=1      
+     
+     
+# Task 2
     
+# Make a Distinct Digit Array
     
+testcases=int(input())
+while testcases>0:
+    arrLength=int(input())
+    arr=[int(item) for item in input().split()]
+    setNum=set()
+    for i in range(arrLength):
+        while arr[i]>0:
+            n=arr[i]%10
+            setNum.add(n)
+            arr[i]=int(arr[i]/10)
+    setNum=sorted(setNum)
+    for i in range(len(setNum)):
+       print(setNum[i],end=" ")
+    print()
+    testcases-=1
+    
+# Task 3
+
+# Transpose Matrix
+
+class Solution:
+    def transpose(self, A: List[List[int]]) -> List[List[int]]:
+        newArr=[[0 for i in range(len(A))] for j in range(len(A[0]))]
+        for i in range(len(A[0])):
+            for j in range(len(A)):
+                newArr[i][j]=A[j][i]
+        return newArr
+ 
+ 
+# Task 4
+
+# Find lucky integer in an array
+
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        numDict={}
+        maxNum=-1
+        for i in range(len(arr)):
+            if arr[i] not in numDict:
+                numDict[arr[i]]=1
+            else:
+                numDict[arr[i]]+=1
+        
+        for num,count in numDict.items():
+            if num==count:
+                maxNum=max(maxNum,num)
+        return maxNum
+        
+ # Task 5
+ 
+ # Toeplitz Matrix
+ 
+ class Solution:
+    def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
+        for i in range(len(matrix)-1):
+            for j in range(len(matrix[0])-1):
+                if matrix[i][j]!=matrix[i+1][j+1]:
+                    return False
+        return True
